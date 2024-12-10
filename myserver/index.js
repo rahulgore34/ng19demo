@@ -11,14 +11,10 @@ app.use(cors());
 app.use(express.json());
 
 // Endpoint for 'dev'
-app.get('/dev', (req, res) => {
-  res.json({ message: 'Hello, Developers!', data: ['Alice', 'Bob', 'Charlie'] });
-});
+
 
 // Endpoint for 'testers'
-app.get('/testers', (req, res) => {
-  res.json({ message: 'Hello, Testers!', data: ['Diana', 'Eve', 'Frank'] });
-});
+
 
 // Start the server
 app.listen(PORT, () => {
