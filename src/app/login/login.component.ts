@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,5 +9,12 @@ import {FormsModule} from '@angular/forms';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
- email = '';
+  email = '';
+  router = inject(Router);
+  onSubmit() {
+    alert('submitted ' + this.email);
+    if (this.email.includes('admin')) {
+      this.router.navigate(['/dashboard']);
+    }
+  }
 }
