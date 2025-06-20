@@ -1,15 +1,21 @@
 <section class="flex items-center justify-center h-screen bg-gray-100">
   <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+    <ng-container>
       <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
       <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
-          <div class="mb-4">
-              <label for="email" class="block text-sm font-medium text-gray-700">Email ID</label>
-              <input type="email" id="email" name="email" class="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email"
-              [(ngModel)]="email" name="email" required email
-              >
-          </div>
-          {{email}}
-          <button type="submit" [disabled]="loginForm.form.invalid" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 disabled:bg-blue-300 transition">Login</button>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email ID</label>
+          <input type="email" id="email" name="email"
+            class="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your email" [(ngModel)]="email" name="email" required email>
+        </div>
+        {{email}}
+        <button type="submit" [disabled]="loginForm.form.invalid"
+          class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 disabled:bg-blue-300 transition">Login</button>
       </form>
+    </ng-container>
+    <div>
+      <app-otp [otplength]="4"></app-otp>
+    </div>
   </div>
 </section>
