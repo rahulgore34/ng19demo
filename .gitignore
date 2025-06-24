@@ -42,3 +42,8 @@ testem.log
 Thumbs.db
 
 /myserver/node_modules
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
