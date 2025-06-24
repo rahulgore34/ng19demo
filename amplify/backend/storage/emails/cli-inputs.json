@@ -1,0 +1,12 @@
+{
+  "resourceName": "emails",
+  "tableName": "emailtable",
+  "partitionKey": {
+    "fieldName": "emailcol",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "emailsTrigger3f587a33"
+  ]
+}
