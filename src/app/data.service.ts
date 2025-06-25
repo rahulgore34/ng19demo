@@ -14,4 +14,10 @@ export class DataService {
 
     return this.http.get(`${this.url}${str}`);
   }
+
+  post() {
+    const awsurl = 'https://co1ztmqvif.execute-api.ap-south-1.amazonaws.com/';
+
+    return this.http.post(awsurl, {email:'rahulgore34@gmail.com'});
+  }
 }

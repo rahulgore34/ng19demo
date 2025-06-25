@@ -13,6 +13,7 @@
         <button type="submit" [disabled]="loginForm.form.invalid"
           class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 disabled:bg-blue-300 transition">Login</button>
       </form>
+      <button (click)="testAWSAPI()">TEST</button>
     </ng-container>
     <div>
       <app-otp [otplength]="4"></app-otp>

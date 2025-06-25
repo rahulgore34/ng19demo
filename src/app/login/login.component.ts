@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { OtpinputDirective } from '../otpinput.directive';
 import { OtpComponent } from '../commoncomps/otp/otp.component';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-login',
@@ -28,6 +29,7 @@ export class LoginComponent implements OnInit {
     },
   ];
   @ViewChildren("otpinputs") otpinputs!: QueryList<ElementRef>;
+  dataService = inject(DataService);
   ngOnInit(): void {
 
   }
@@ -37,6 +39,19 @@ export class LoginComponent implements OnInit {
     }
   }
 
+
+  testAWSAPI() {
+this.dataService.post().subscribe({
+  next:(data)=>{
+    console.log('data',data);
+
+  },
+  error:(e)=>{
+    console.log('Error ',e);
+
+  }
+})
+  }
 
 
 
