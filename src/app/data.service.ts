@@ -16,8 +16,8 @@ export class DataService {
   }
 
   post() {
-    const awsurl = 'https://co1ztmqvif.execute-api.ap-south-1.amazonaws.com/';
+    const awsurl = 'https://ir36ahic41.execute-api.ap-south-1.amazonaws.com/newgreet';
 
-    return this.http.post(awsurl, {email:'rahulgore34@gmail.com'});
+    return this.http.post(awsurl,{name: 'RAHUL GORE'});
   }
 }
